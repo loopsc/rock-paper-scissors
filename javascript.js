@@ -7,85 +7,76 @@ function getComputerChoice() {
   testingNumber = 0.9;
 
   if (randomNumber <= 0.33) {
-    botResult.textContent = 'Computer chose: rock'
+    botResult.textContent = 'Computer chose: Rack'
     return "rock";
     
   } else if (0.33 < randomNumber && randomNumber < 0.66) {
-    botResult.textContent = 'Computer chose: paper'
+    botResult.textContent = 'Computer chose: Pahper'
     return "paper";
   } else {
-    botResult.textContent = 'Computer chose: scissors'
+    botResult.textContent = 'Computer chose: Skazzors'
     return "scissors";
   }
 }
 
-const rockBtn = document.querySelector("#rock-btn");
-const paperBtn = document.querySelector("#paper-btn");
-const scissorsBtn = document.querySelector("#scissors-btn");
-const result = document.querySelector('#result');
+const result = document.querySelector('#result')
 const botResult = document.querySelector('#bot-result')
+const buttons = document.querySelector('#button-container')
+const playerScore = document.querySelector('#player-score')
+const compScore = document.querySelector('#comp-score')
 
-const buttons = document.querySelector('#button-container');
 
 buttons.addEventListener('click', (e) => {
 
   switch(e.target.id) {
     case 'rock-btn':
       playRound('rock',getComputerChoice())
+      playerScore.textContent = humanScore;
+      compScore.textContent = computerScore;
       break
     case 'paper-btn':
       playRound('paper',getComputerChoice())
+      playerScore.textContent = humanScore;
+      compScore.textContent = computerScore;
       break
     case 'scissors-btn':
       playRound('scissors',getComputerChoice())
+      playerScore.textContent = humanScore;
+      compScore.textContent = computerScore;
       break
   }
 })
 
-
-// rockBtn.addEventListener("click", () => {
-//   playRound('rock',getComputerChoice())
-// });
-
-// paperBtn.addEventListener("click", () => {
-//   playRound('paper',getComputerChoice())
-// });
-
-// scissorsBtn.addEventListener("click", () => {
-//   playRound('scissors',getComputerChoice())
-// });
-
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "rock") {
     if (computerChoice == "rock") {
-      // return "draw";
-      result.textContent = 'draw'
+      result.textContent = 'Draw'
     } else if (computerChoice == "paper") {
       computerScore++;
-      result.textContent = "You lose, paper beats rock";
+      result.textContent = "Unluggy. Pahper beats Rack";
     } else {
       humanScore++;
-      result.textContent = "You win, rock beats scissors";
+      result.textContent = "Noice! Rack beats Skazzors";
     }
   } else if (humanChoice == "paper") {
     if (computerChoice == "paper") {
-      result.textContent = "draw";
+      result.textContent = "Draw";
     } else if (computerChoice == "scissors") {
       computerScore++;
-      result.textContent = "You lose, scissors beats paper";
+      result.textContent = "Unluggy! Skazzors beats Pahper";
     } else {
       humanScore++;
-      result.textContent = "You win, paper beats rock";
+      result.textContent = "Noice! Pahper beats Rack";
     }
   } else {
     if (computerChoice == "scissors") {
-      result.textContent = "draw";
+      result.textContent = "Draw";
     } else if (computerChoice == "rock") {
       computerScore++;
-      result.textContent = "You lose, rock beats scissors";
+      result.textContent = "Unluggy! Rock beats Skazzors";
     } else {
       humanScore++;
-      result.textContent = "You win, scissors beats paper";
+      result.textContent = "Noice! Skazzors beats Pahper";
     }
   }
 }

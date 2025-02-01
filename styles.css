@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* div that holds #bot-result and #result */
+#game-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 120px;
+    flex: 2;
+    background-color: brown;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* div that displays the roll of the computer */
+#bot-result {
+
+}
+
+/* div that displays the round result */
+#result {
+    margin-top: 20px;
+    font-size: 100px;
+    flex-wrap: wrap;
+}
+
+#bottom-div {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(235, 193, 142);
+}
+
+.score-text{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+#player-score,
+#comp-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgb(250, 199, 136);
+    padding: 13px;
+    
+}
+
+#button-container {
+
+}
+
+button {
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:500;
+    padding: 10px;
+    margin: 8px;
+    background-color: rgb(250, 199, 136);
+    border-radius: 12px;
+    border: 1px solid black;
+    color: rgb(162, 0, 255);
+}
+
+button:hover {
+    background-color: rgb(252, 184, 102);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor:pointer;
+}
