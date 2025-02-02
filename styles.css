@@ -16,13 +16,28 @@ body {
     text-align: center;
     font-size: 120px;
     flex: 2;
-    background-color: brown;
+    background-color: rgb(243, 175, 85);
     font-family:'Courier New', Courier, monospace;
+}
+
+#round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-basis: 100px;
+    border: 2px solid black;
+    align-self: center;
+    width: 100px;
+    padding: 6px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    background-color: rgb(250, 199, 136);
 }
 
 /* div that displays the roll of the computer */
 #bot-result {
-
+    
 }
 
 /* div that displays the round result */
